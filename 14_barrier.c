@@ -14,14 +14,14 @@ pthread_barrier_t barrier;
 
 void* routine(void* args)
 {
-	// while (1)//for ENDLES LOOP
-	// {
+	while (1)//for ENDLES LOOP
+	{
 	printf("Waiting at the barrier...\n");
 	sleep(1);
 	pthread_barrier_wait(&barrier);//exactly the POINT where all THREADS WIT
 	printf("We passed the barrier!\n");//printf might be intermingled
 	sleep(1);
-	// }
+	}
 }
 
 int	main(int ac, char* av[])
